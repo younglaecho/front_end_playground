@@ -16,38 +16,19 @@
 </head>
 
 <body>
-  <div id="item0">1</div>
-  <div id="item1">2</div>
-  <div id="item2">3</div>
-  <div id="item3">4</div>
-  <div id="item4">5</div>
-  <script>
-    // document.querySelector("#item0").onclick = function doSomething(evt) {
-    //   console.log(1000)
-    // }
-    // var list = ['item0','item1', 'item2', 'item3', 'item4']
-    // var i
-    // function doSomethingHandler (itemIndex) {
-    //   return function doSomething(evt) {
-    //     console.log((itemIndex));
-    //   };
-    // };
+  <script>  
+    function test () {
+      a="test"
+      console.log(a)
+    }
 
-    // for (i = 0; i < list.length; i += 1) {
-    //   document.querySelector("#"+list[i]).onclick = doSomethingHandler(i);
-    // }
-  function test () {
-    a="test"
-    console.log(a)
-  }
-
-  function test1 (func) {
-    func()
-    b="test2"
-    console.log(b)
-  }
-  
-  test1(test)
+    function test1 (func) {
+      func()
+      b="test2"
+      console.log(b)
+    }
+    
+    test1(test)
 
   </script>
 </body>
