@@ -13,6 +13,21 @@
 - key(index) – 인덱스(index)에 해당하는 키를 받아옵니다.
 - length – 저장된 항목의 개수를 얻습니다.
 
+## 일반적인 형태
+
+- 키와 값으로 반드시 문장열을 사용함
+- JSON을 사용하면 객체를 쓸 수 있음
+
+```
+  localStorage.setItem('nmae', 'cho)
+```
+
+위의 내용을 실행한 뒤 브라우저를 닫고 다시 연 다음 아래를 실행하면 이런 결과가 나옴
+
+```
+alert( localStorage.getItem('name') ); // 'cho'
+```
+
 ## 일반적인 객체처럼 사용할 수 있으나 추천되지 않음.
 
 ```
@@ -28,3 +43,13 @@
 ## sessionStorage
 
 탭을 끄면 저장된 내용이 사라짐.
+
+## 스토리지 이벤트
+
+localStroge 나 sessionStroge의 데이터가 갱신될때, storage 이벤트가 실행됨. storage 이벤트는 아래와 같은 프로퍼티를 지원함.
+
+- key – 변경된 데이터의 키(.clear()를 호출했다면 null)
+- oldValue – 이전 값(키가 새롭게 추가되었다면 null)
+- newValue – 새로운 값(키가 삭제되었다면 null)
+- url – 갱신이 일어난 문서의 url
+- storageArea – 갱신이 일어난 localStorage나 sessionStorage 객체
