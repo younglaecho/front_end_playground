@@ -114,8 +114,6 @@ printHello2()
 // console.log(value)
 // var value
 
-
-
 // Callback 
 function randomQuiz(answer, func1, func2) {
   if (answer==='!!!') {
