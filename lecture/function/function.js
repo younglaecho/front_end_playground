@@ -146,8 +146,13 @@ const ArrowFunc = () => {
 ArrowFunc()
 
 const ArrowEx = (a, b) => a + b
+const ArrowEx = (a, b) => {
+  return a + b
+}
+
 console.log(ArrowEx(1,2))
 
 
+// 숙제 : add, 빼기, mul, div
 // TIL(Today I Learn)
 
