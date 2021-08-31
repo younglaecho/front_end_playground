@@ -5,11 +5,12 @@ class Article {
   }
 
   static printPublisher() {
-    console.log(Article.publisher)
+    console.log(this.publisher)
   }
 }
 
 
 const article1 = new Article()
-console.log(article1.publisher)
-console.log(Article.publisher)
+console.log(article1.publisher);
+console.log(Article.publisher);
+Article.printPublisher()

@@ -4,5 +4,5 @@ class Test {
 };
 
 const test = new Test();
-console.log(test.publicField)
-console.log(test.privateField)
+console.log(test.publicField);
+console.log(test.privateField);
