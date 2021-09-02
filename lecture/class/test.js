@@ -162,3 +162,16 @@ console.log(user4)
 user4.name = 'kim'
 console.log(user)
 
+
+// 목요일에 배열, TIL 작성좀 ㅎㅎ
+
+// HTML, CSS,             
+// form 
+// css
+// 2주 동안 css 끝내고 
+// 자바스크립트 기본내용 끝내고
+// DOM Event에 대해서 
+// 2달 정도
+// 상호작용 하는 요소가 
+// game 만들기
+// 테트리스 만들기
