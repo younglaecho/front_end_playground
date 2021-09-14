@@ -91,3 +91,7 @@ test2.push(1)
 console.log(test2)
 console.log(test1)
 
+
+
+// async await => !!! 
+// 시험은 대면... 아하... 
