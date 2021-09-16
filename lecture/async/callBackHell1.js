@@ -46,3 +46,20 @@ userStorage.loginUser(
     console.log(error)
   }
 )
+
+
+if (!!~arr.indexOf('1')) {
+
+}
+
+let condition 
+
+if (arr.indexOf==-1) {
+  condition=true
+} else {
+  condition=false
+}
+if (condition) {
+
+}
+// promise, aysnc await
