@@ -23,6 +23,7 @@ class UserStorage {
   }
 }
 
+
 const userStorage = new UserStorage()
 const id = prompt('아이디를 입력하세요')
 const password = prompt('비밀번호를 입력하세요')
