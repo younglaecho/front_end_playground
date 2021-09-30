@@ -1,15 +1,17 @@
 class UserStorage {
-  loginUser(id, password, onSuccess, onError) {
-    setTimeout(()=> {
-      if(
-        (id == 'cho' && password=='1234') || 
-        (id == 'kim' && password=='2580')
-      ) {
-        onSuccess(id)
-      } else {
-        onError(new Error('not found'))
-      }
-    }, 2000)
+  loginUser(id, password) {
+    return new Promise ((resolve, reject)=> {
+      setTimeout(()=> {
+        if(
+          (id == 'cho' && password=='1234') || 
+          (id == 'kim' && password=='2580')
+        ) {
+          resolve(id)
+        } else {
+          reject(new Error('not found'))
+        }
+      }, 2000)
+    })
   }
 
   getRoles(user, onSuccess, onError) {
