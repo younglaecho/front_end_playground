@@ -25,13 +25,14 @@ function delay(ms) {
 
 async function getApple() {
   await delay(1000)
+  // throw (new Error('error'))
   return('🍎')
 }
 
-// async function getBanana() {
-//   await delay(2000)
-//   return('🍌')
-// }
+async function getBanana() {
+  await delay(2000)
+  return('🍌')
+}
 
 // function getBanana() {
 //   return delay(2000)
@@ -40,12 +41,35 @@ async function getApple() {
 //   })
 // }
 
-delay(2000)
-  .then(() => {
-    return '🍌'
-  })
-  .then(console.log)
+// delay(2000)
+//   .then(() => {
+//     return '🍌'
+//   })
+//   .then(console.log)
 
+// function pickFruits() {
+//   return getApple().then(apple => {
+//     return getBanana().then(banana=> `${apple}+${banana}`)
+//   })
+// }
 
-// 다음주 화요일? 에 async_await 
-// 몇시? 8시? 마라탕 화이팅 !
+// async function pickFruits() {
+//   try {
+//     const apple = await getApple();
+//     const banana =  await getBanana();
+//     return `${apple} + ${banana}`;
+//   } catch {
+//     console.log('에러가 발생했습니다.')
+//   }
+// }
+
+pickFruits().then(console.log);
+
+// 병렬처리
+async function pickFruits() {
+  const applePromise = getApple();
+  const bananaPromise = getBanana();
+  const apple = await applePromise;
+  const banana = await bananaPromise;
+  return `${apple} + ${banana}`;
+}

@@ -1,0 +1,81 @@
+import turtle
+import math
+
+def make_tree_floor(start_x, start_y, radius):
+  t= turtle.Pen()
+  t.shape("circle")
+  t.color('green')
+  t.left(320)
+  t.penup()
+  t.sety(start_y)
+  t.setx(start_x)
+  t.pendown()
+  t.begin_fill()
+  t.circle(radius, 80)
+  a = t.heading()
+  t.setheading(135)
+  small_radius= radius*3/5
+  t.forward((radius-small_radius))
+  t.setheading(40)
+  t.circle(math.sqrt(((radius-small_radius)*math.sin(math.radians(5)))**2+(radius-(radius-small_radius)*math.cos(math.radians(5)))**2), -(80-2*math.degrees(math.atan(2*math.sin(math.radians(5))/(5-2*math.cos(math.radians(5))))))-3)
+  t.goto(start_x,start_y)
+  t.end_fill()
+make_tree_floor(-314,-212, 500)
+make_tree_floor(-314+120,-212+153,300)
+
+t= turtle.Pen()
+t.color('green')
+t.shape("circle")
+
+t.left(320)
+t.penup()
+t.sety(30)
+t.setx(-110)
+t.pendown()
+t.begin_fill()
+t.circle(165, 80)
+t.goto(0, 150)
+t.goto(-110,30)
+t.end_fill()
+# t.forward(100)
+
+star = turtle.Pen()
+star.penup()
+star.goto(15, 200)
+star.color('yellow')
+star.pendown()
+star.begin_fill()
+for i in range(5):
+  star.forward(50)
+  star.right((360 / 5) * 2)
+  star.forward(50)
+  star.left(360 / 5)
+star.end_fill()
+
+def make_dot(x,y, color):
+
+  dot = turtle.Pen()
+  dot.penup()
+  dot.goto(x,y)
+  dot.pendown()
+  dot.dot(30,color)
+  dot.penup()
+  dot.hideturtle()
+
+
+make_dot(-200, -150, "blue")
+make_dot(-100, -80, "blue")
+make_dot(100, -180, "blue")
+make_dot(20, -40, "blue")
+make_dot(200, -150, "yellow")
+make_dot(100, -50, "yellow")
+make_dot(20, -200, "yellow")
+make_dot(-120, -220, "yellow")
+make_dot(-80, -180, "yellow")
+make_dot(-200, -200, "red")
+make_dot(-100, -30, "red")
+make_dot(10, 50, "red")
+make_dot(-40, -230, "red")
+make_dot(130, -240, "red")
+turtle.exitonclick()
+
