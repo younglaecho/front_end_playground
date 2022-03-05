@@ -12,7 +12,6 @@ def make_tree_floor(start_x, start_y, radius):
   t.pendown()
   t.begin_fill()
   t.circle(radius, 80)
-  a = t.heading()
   t.setheading(135)
   small_radius= radius*3/5
   t.forward((radius-small_radius))
